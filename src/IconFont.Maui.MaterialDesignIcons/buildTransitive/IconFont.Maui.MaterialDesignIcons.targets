@@ -1,0 +1,35 @@
+<Project>
+  <Import Project="$(MSBuildThisFileDirectory)IconFont.props" Condition="Exists('$(MSBuildThisFileDirectory)IconFont.props')" />
+
+  <!-- Clear source-relative paths and redefine with package-relative paths -->
+  <ItemGroup>
+    <IconFontDefinition Remove="@(IconFontDefinition)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <IconFontDefinition Include="$(MSBuildThisFileDirectory)Fonts/MaterialIconsOutlined-Regular.otf">
+      <FontAlias>MaterialDesignIconsOutlined</FontAlias>
+      <FontClass>MaterialDesignIconsOutlined</FontClass>
+      <FontNamespace>IconFont.Maui.MaterialDesignIcons</FontNamespace>
+    </IconFontDefinition>
+    <IconFontDefinition Include="$(MSBuildThisFileDirectory)Fonts/MaterialIconsRound-Regular.otf">
+      <FontAlias>MaterialDesignIconsRound</FontAlias>
+      <FontClass>MaterialDesignIconsRound</FontClass>
+      <FontNamespace>IconFont.Maui.MaterialDesignIcons</FontNamespace>
+    </IconFontDefinition>
+    <IconFontDefinition Include="$(MSBuildThisFileDirectory)Fonts/MaterialIconsSharp-Regular.otf">
+      <FontAlias>MaterialDesignIconsSharp</FontAlias>
+      <FontClass>MaterialDesignIconsSharp</FontClass>
+      <FontNamespace>IconFont.Maui.MaterialDesignIcons</FontNamespace>
+    </IconFontDefinition>
+    <IconFontDefinition Include="$(MSBuildThisFileDirectory)Fonts/MaterialIconsTwoTone-Regular.otf">
+      <FontAlias>MaterialDesignIconsTwoTone</FontAlias>
+      <FontClass>MaterialDesignIconsTwoTone</FontClass>
+      <FontNamespace>IconFont.Maui.MaterialDesignIcons</FontNamespace>
+    </IconFontDefinition>
+  </ItemGroup>
+
+  <ItemGroup>
+    <MauiFont Include="@(IconFontDefinition)" Alias="%(IconFontDefinition.FontAlias)" />
+  </ItemGroup>
+</Project>

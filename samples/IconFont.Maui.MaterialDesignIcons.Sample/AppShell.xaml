@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="IconFont.Maui.MaterialDesignIcons.Sample.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:IconFont.Maui.MaterialDesignIcons.Sample"
+    Title="Material Design Icons">
+
+    <TabBar>
+        <ShellContent
+            Title="Outlined"
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Route="OutlinedIcons" />
+        <ShellContent
+            Title="Round"
+            ContentTemplate="{DataTemplate local:RoundIconsPage}"
+            Route="RoundIcons" />
+        <ShellContent
+            Title="Sharp"
+            ContentTemplate="{DataTemplate local:SharpIconsPage}"
+            Route="SharpIcons" />
+        <ShellContent
+            Title="TwoTone"
+            ContentTemplate="{DataTemplate local:TwoToneIconsPage}"
+            Route="TwoToneIcons" />
+    </TabBar>
+
+</Shell>

@@ -1,0 +1,32 @@
+<Project>
+  <PropertyGroup>
+    <IconFontFile>MaterialIconsOutlined-Regular.otf</IconFontFile>
+    <IconFontAlias>MaterialDesignIconsOutlined</IconFontAlias>
+    <IconFontClass>MaterialDesignIconsOutlined</IconFontClass>
+    <IconFontNamespace>IconFont.Maui.MaterialDesignIcons</IconFontNamespace>
+  </PropertyGroup>
+
+  <!-- Multi-font support: define one or more IconFontDefinition items. -->
+  <ItemGroup>
+    <IconFontDefinition Include="Resources/Fonts/MaterialIconsOutlined-Regular.otf">
+      <FontAlias>MaterialDesignIconsOutlined</FontAlias>
+      <FontClass>MaterialDesignIconsOutlined</FontClass>
+      <FontNamespace>IconFont.Maui.MaterialDesignIcons</FontNamespace>
+    </IconFontDefinition>
+    <IconFontDefinition Include="Resources/Fonts/MaterialIconsRound-Regular.otf">
+      <FontAlias>MaterialDesignIconsRound</FontAlias>
+      <FontClass>MaterialDesignIconsRound</FontClass>
+      <FontNamespace>IconFont.Maui.MaterialDesignIcons</FontNamespace>
+    </IconFontDefinition>
+    <IconFontDefinition Include="Resources/Fonts/MaterialIconsSharp-Regular.otf">
+      <FontAlias>MaterialDesignIconsSharp</FontAlias>
+      <FontClass>MaterialDesignIconsSharp</FontClass>
+      <FontNamespace>IconFont.Maui.MaterialDesignIcons</FontNamespace>
+    </IconFontDefinition>
+    <IconFontDefinition Include="Resources/Fonts/MaterialIconsTwoTone-Regular.otf">
+      <FontAlias>MaterialDesignIconsTwoTone</FontAlias>
+      <FontClass>MaterialDesignIconsTwoTone</FontClass>
+      <FontNamespace>IconFont.Maui.MaterialDesignIcons</FontNamespace>
+    </IconFontDefinition>
+  </ItemGroup>
+</Project>
