@@ -1,26 +1,23 @@
-[![NuGet](https://img.shields.io/nuget/v/IconFont.Maui.MaterialDesignIcons.svg?label=NuGet)](https://www.nuget.org/packages/IconFont.Maui.MaterialDesignIcons)
+[![NuGet](https://img.shields.io/nuget/v/IconFont.Maui.MaterialDesignWebIcons.svg?label=NuGet)](https://www.nuget.org/packages/IconFont.Maui.MaterialDesignWebIcons)
 
-# IconFont.Maui.MaterialDesignIcons
+# IconFont.Maui.MaterialDesignWebIcons
 
-`IconFont.Maui.MaterialDesignIcons` ships four [Google Material Design Icons](https://github.com/google/material-design-icons) OTF icon fonts for .NET MAUI:
+`IconFont.Maui.MaterialDesignWebIcons` ships four [Google Material Design Icons](https://github.com/google/material-design-icons) OTF icon fonts for .NET MAUI:
 
 | Style | File | Class |
 |-------|------|-------|
-| Outlined | `MaterialIconsOutlined-Regular.otf` | `MaterialDesignIconsOutlined` |
-| Round | `MaterialIconsRound-Regular.otf` | `MaterialDesignIconsRound` |
-| Sharp | `MaterialIconsSharp-Regular.otf` | `MaterialDesignIconsSharp` |
-| Two-Tone | `MaterialIconsTwoTone-Regular.otf` | `MaterialDesignIconsTwoTone` |
+| Web | `materialdesignicons-webfont.ttf` | `MaterialDesignWebIconsOutlined` |
 
-It registers the fonts across supported targets when you call `UseMaterialDesignIcons()` (or individual helpers) and exposes strongly-typed glyph constants to simplify XAML and C# usage.
+It registers the fonts across supported targets when you call `UseMaterialDesignWebIcons()` (or individual helpers) and exposes strongly-typed glyph constants to simplify XAML and C# usage.
 
 ## ✨ Features
-- ⚙️ **One-line setup**: call `builder.UseMaterialDesignIcons()` to register all fonts, or per-font helpers like `UseMaterialDesignIconsOutlined()`, `UseMaterialDesignIconsRound()`, etc.
-- 🔤 **Strongly-typed glyphs** via flat classes: `MaterialDesignIconsOutlined.Home`, `MaterialDesignIconsRound.Search`, etc.
+- ⚙️ **One-line setup**: call `builder.UseMaterialDesignWebIcons()` to register all fonts,.
+- 🔤 **Strongly-typed glyphs** via flat classes: `MaterialDesignWebIconsOutlined.Home`, `MaterialDesignWebIconsRound.Search`, etc.
 - 📱 **Supported targets**: Android, iOS, Mac Catalyst, Windows
 
 ## 📦 Install
 ```bash
-dotnet add package IconFont.Maui.MaterialDesignIcons
+dotnet add package IconFont.Maui.MaterialDesignWebIcons
 ```
 
 ## 🚀 Getting Started
@@ -29,34 +26,31 @@ dotnet add package IconFont.Maui.MaterialDesignIcons
 ```csharp
 var builder = MauiApp.CreateBuilder()
     .UseMauiApp<App>()
-    .UseMaterialDesignIcons(); // registers all four font styles
+    .UseMaterialDesignWebIcons(); // registers all four font styles
 ```
 
 Or register individual fonts:
 ```csharp
-builder.UseMaterialDesignIconsOutlined();  // Outlined only
-builder.UseMaterialDesignIconsRound();     // Round only
-builder.UseMaterialDesignIconsSharp();     // Sharp only
-builder.UseMaterialDesignIconsTwoTone();   // Two-Tone only
+builder.UseMaterialDesignWebIconsOutlined();  // Outlined only
 ```
 
 ### XAML usage
 ```xml
-xmlns:icons="clr-namespace:IconFont.Maui.MaterialDesignIcons;assembly=IconFont.Maui.MaterialDesignIcons"
+xmlns:icons="clr-namespace:IconFont.Maui.MaterialDesignWebIcons;assembly=IconFont.Maui.MaterialDesignWebIcons"
 
-<Label Glyph="{x:Static icons:MaterialDesignIconsOutlined.Home}"
-       FontFamily="{x:Static icons:MaterialDesignIconsOutlined.FontFamily}"
+<Label Glyph="{x:Static icons:MaterialDesignWebIconsOutlined.Home}"
+       FontFamily="{x:Static icons:MaterialDesignWebIconsOutlined.FontFamily}"
        FontSize="32" />
 ```
 
 ### C# usage
 ```csharp
-using IconFont.Maui.MaterialDesignIcons;
+using IconFont.Maui.MaterialDesignWebIcons;
 
 var label = new Label
 {
-    FontFamily = MaterialDesignIconsOutlined.FontFamily,
-    Text = MaterialDesignIconsOutlined.Home,
+    FontFamily = MaterialDesignWebIconsOutlined.FontFamily,
+    Text = MaterialDesignWebIconsOutlined.Home,
     FontSize = 32
 };
 ```
@@ -68,14 +62,7 @@ The source generator emits flat top-level classes for XAML `{x:Static}` compatib
 
 | Class | Example |
 |-------|---------|
-| `MaterialDesignIconsOutlined` | `MaterialDesignIconsOutlined.Home` |
-| `MaterialDesignIconsRound` | `MaterialDesignIconsRound.Home` |
-| `MaterialDesignIconsSharp` | `MaterialDesignIconsSharp.Home` |
-| `MaterialDesignIconsTwoTone` | `MaterialDesignIconsTwoTone.Home` |
-
-## ❓ Why not Filled?
-
-The classic Material Icons "Filled" style is only distributed as a TTF with `post` table version 3.0 (no glyph names). The source generator extracts glyph names from font metadata, so only the four OTF styles are supported. All four OTF styles contain the same icon set with the same codepoints.
+| `MaterialDesignWebIconsOutlined` | `MaterialDesignWebIconsOutlined.Home` |
 
 ## 🧩 Platforms
 | Platform | Minimum |
@@ -87,8 +74,9 @@ The classic Material Icons "Filled" style is only distributed as a TTF with `pos
 
 ## 📄 License
 - **Library:** MIT
-- **Font:** Apache 2.0 © Google (see [NOTICE.md](NOTICE.md) and [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0))
+- **Font & Icons:** Apache 2.0 © Google (see [NOTICE.md](NOTICE.md) and [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0))
+- **Service:** MIT © Pictogrammers (see [NOTICE.md](NOTICE.md) and [MIT](https://pictogrammers.com/docs/general/license))
 
 ## 🙏 Attribution
 - Upstream font: Apache 2.0 © Google LLC
-- This project is not affiliated with or endorsed by Google.
+- This project is not affiliated with or endorsed by Google or Pictogrammers.

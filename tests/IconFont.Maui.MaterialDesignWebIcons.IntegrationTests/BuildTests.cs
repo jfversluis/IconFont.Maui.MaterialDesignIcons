@@ -1,0 +1,54 @@
+using System;
+using System.Diagnostics;
+using System.IO;
+using System.Linq;
+using Xunit;
+
+namespace IconFont.Maui.MaterialDesignWebIcons.IntegrationTests;
+
+public class BuildTests
+{
+    [Fact]
+    public void Generates_Config_Files_On_Build()
+    {
+        if (!IsMac()) return;
+
+        var repoRoot = GetRepoRoot();
+        var proj = Path.Combine(repoRoot, "src", "IconFont.Maui.MaterialDesignWebIcons", "IconFont.Maui.MaterialDesignWebIcons.csproj");
+        var psi = new ProcessStartInfo
+        {
+            FileName = "dotnet",
+            Arguments = "build \"" + proj + "\" -f net10.0-maccatalyst -v minimal",
+            WorkingDirectory = repoRoot,
+            RedirectStandardOutput = true,
+            RedirectStandardError = true,
+        };
+        var proc = Process.Start(psi)!;
+        var output = proc.StandardOutput.ReadToEnd();
+        var err = proc.StandardError.ReadToEnd();
+        proc.WaitForExit();
+        Assert.True(proc.ExitCode == 0, $"build failed: {output}\n{err}");
+
+        var objRoot = Path.Combine(repoRoot, "src", "IconFont.Maui.MaterialDesignWebIcons", "obj");
+        var configs = Directory.EnumerateFiles(objRoot, "IconFontConfig.g.cs", SearchOption.AllDirectories).ToList();
+        var extensions = Directory.EnumerateFiles(objRoot, "IconFontExtensions.g.cs", SearchOption.AllDirectories).ToList();
+        Assert.True(configs.Count > 0, "IconFontConfig.g.cs not found");
+        Assert.True(extensions.Count > 0, "IconFontExtensions.g.cs not found");
+
+        var configText = configs.Select(File.ReadAllText).First(text => text.Contains("IconFontConfigs"));
+        Assert.Contains("MaterialDesignWebIconsOutlined", configText);
+
+        var extText = extensions.Select(File.ReadAllText).First(text => text.Contains("IconFontBuilderExtensions"));
+        Assert.Contains("UseMaterialDesignWebIconsOutlined", extText);
+    }
+
+    private static bool IsMac() => OperatingSystem.IsMacOS();
+
+    private static string GetRepoRoot()
+    {
+        var dir = new DirectoryInfo(Directory.GetCurrentDirectory());
+        while (dir != null && !File.Exists(Path.Combine(dir.FullName, "IconFont.Maui.MaterialDesignWebIcons.sln")))
+            dir = dir.Parent!;
+        return dir?.FullName ?? Directory.GetCurrentDirectory();
+    }
+}
