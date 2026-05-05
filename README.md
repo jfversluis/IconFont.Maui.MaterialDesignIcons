@@ -2,7 +2,8 @@
 
 # IconFont.Maui.MaterialDesignWebIcons
 
-`IconFont.Maui.MaterialDesignWebIcons` ships four [Google Material Design Icons](https://github.com/google/material-design-icons) OTF icon fonts for .NET MAUI:
+`IconFont.Maui.MaterialDesignWebIcons` ships the [Google Material Design Icons](https://github.com/google/material-design-icons) OTF icon font, 
+extended and provided by [Pictogrammers](https://pictogrammers.com/library/mdi/) for .NET MAUI:
 
 | Style | File | Class |
 |-------|------|-------|
