@@ -13,11 +13,11 @@
 		<LangVersion>preview</LangVersion>
 		<PackageId>IconFont.Maui.MaterialDesignWebIcons</PackageId>
 		<Title>Material Design Icons for .NET MAUI</Title>
-		<Description>Provides Material Design Icons (Outlined, Round, Sharp, TwoTone) as a drop-in icon font for .NET MAUI applications with automatic font registration.</Description>
+		<Description>Provides Material Design Web Icons (https://pictogrammers.com/library/mdi/) as a drop-in icon font for .NET MAUI applications with automatic font registration.</Description>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<RepositoryUrl>https://github.com/AndreasReitberger/IconFont.Maui.MaterialDesignWebIcons</RepositoryUrl>
 		<PackageProjectUrl>https://github.com/AndreasReitberger/IconFont.Maui.MaterialDesignWebIcons</PackageProjectUrl>
-		<PackageTags>maui;icons;font;material-design;google;web</PackageTags>
+		<PackageTags>maui;icons;font;material-design;google;web;pictogrammers</PackageTags>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
@@ -28,7 +28,7 @@
 		<EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
 		<CompilerGeneratedFilesOutputPath>$(IntermediateOutputPath)generated</CompilerGeneratedFilesOutputPath>
 		<Authors>Gerald Versluis; Andreas Reitberger</Authors>
-		<Version>1.0.0-preview1</Version>
+		<Version>1.0.0-preview2</Version>
 
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">15.0</SupportedOSPlatformVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">15.0</SupportedOSPlatformVersion>
