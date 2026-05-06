@@ -7,13 +7,13 @@ extended and provided by [Pictogrammers](https://pictogrammers.com/library/mdi/)
 
 | Style | File | Class |
 |-------|------|-------|
-| Web | `materialdesignicons-webfont.ttf` | `MaterialDesignWebIconsOutlined` |
+| Web | `materialdesignicons-webfont.ttf` | `MaterialDesignWebIcons` |
 
 It registers the fonts across supported targets when you call `UseMaterialDesignWebIcons()` (or individual helpers) and exposes strongly-typed glyph constants to simplify XAML and C# usage.
 
 ## ✨ Features
 - ⚙️ **One-line setup**: call `builder.UseMaterialDesignWebIcons()` to register all fonts,.
-- 🔤 **Strongly-typed glyphs** via flat classes: `MaterialDesignWebIconsOutlined.Home`, `MaterialDesignWebIconsRound.Search`, etc.
+- 🔤 **Strongly-typed glyphs** via flat classes: `MaterialDesignWebIcons.Home`, `MaterialDesignWebIcons.Search`, etc.
 - 📱 **Supported targets**: Android, iOS, Mac Catalyst, Windows
 
 ## 📦 Install
@@ -30,17 +30,12 @@ var builder = MauiApp.CreateBuilder()
     .UseMaterialDesignWebIcons(); // registers all four font styles
 ```
 
-Or register individual fonts:
-```csharp
-builder.UseMaterialDesignWebIconsOutlined();  // Outlined only
-```
-
 ### XAML usage
 ```xml
 xmlns:icons="clr-namespace:IconFont.Maui.MaterialDesignWebIcons;assembly=IconFont.Maui.MaterialDesignWebIcons"
 
-<Label Glyph="{x:Static icons:MaterialDesignWebIconsOutlined.Home}"
-       FontFamily="{x:Static icons:MaterialDesignWebIconsOutlined.FontFamily}"
+<Label Glyph="{x:Static icons:MaterialDesignWebIcons.Home}"
+       FontFamily="{x:Static icons:MaterialDesignWebIcons.FontFamily}"
        FontSize="32" />
 ```
 
@@ -50,8 +45,8 @@ using IconFont.Maui.MaterialDesignWebIcons;
 
 var label = new Label
 {
-    FontFamily = MaterialDesignWebIconsOutlined.FontFamily,
-    Text = MaterialDesignWebIconsOutlined.Home,
+    FontFamily = MaterialDesignWebIcons.FontFamily,
+    Text = MaterialDesignWebIcons.Home,
     FontSize = 32
 };
 ```
@@ -63,7 +58,7 @@ The source generator emits flat top-level classes for XAML `{x:Static}` compatib
 
 | Class | Example |
 |-------|---------|
-| `MaterialDesignWebIconsOutlined` | `MaterialDesignWebIconsOutlined.Home` |
+| `MaterialDesignWebIcons` | `MaterialDesignWebIcons.Home` |
 
 ## 🧩 Platforms
 | Platform | Minimum |

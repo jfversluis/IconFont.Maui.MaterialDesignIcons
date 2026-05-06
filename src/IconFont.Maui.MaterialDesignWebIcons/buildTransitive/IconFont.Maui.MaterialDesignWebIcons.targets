@@ -8,8 +8,8 @@
 
   <ItemGroup>
     <IconFontDefinition Include="$(MSBuildThisFileDirectory)Fonts/materialdesignicons-webfont.ttf">
-      <FontAlias>MaterialDesignWebIconsOutlined</FontAlias>
-      <FontClass>MaterialDesignWebIconsOutlined</FontClass>
+      <FontAlias>MaterialDesignWebIcons</FontAlias>
+      <FontClass>MaterialDesignWebIcons</FontClass>
       <FontNamespace>IconFont.Maui.MaterialDesignWebIcons</FontNamespace>
     </IconFontDefinition>
   </ItemGroup>

@@ -36,10 +36,10 @@ public class BuildTests
         Assert.True(extensions.Count > 0, "IconFontExtensions.g.cs not found");
 
         var configText = configs.Select(File.ReadAllText).First(text => text.Contains("IconFontConfigs"));
-        Assert.Contains("MaterialDesignWebIconsOutlined", configText);
+        Assert.Contains("MaterialDesignWebIcons", configText);
 
         var extText = extensions.Select(File.ReadAllText).First(text => text.Contains("IconFontBuilderExtensions"));
-        Assert.Contains("UseMaterialDesignWebIconsOutlined", extText);
+        Assert.Contains("UseMaterialDesignWebIcons", extText);
     }
 
     private static bool IsMac() => OperatingSystem.IsMacOS();

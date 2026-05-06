@@ -21,7 +21,7 @@ public class IconsViewModel
 
     public IconsViewModel(string? fontClass = null)
     {
-        var asm = typeof(MaterialDesignWebIconsOutlined).Assembly;
+        var asm = typeof(MaterialDesignWebIcons).Assembly;
         foreach (var cfg in IconFontConfigs.All)
         {
             if (fontClass is not null && !string.Equals(cfg.ClassName, fontClass, StringComparison.Ordinal))

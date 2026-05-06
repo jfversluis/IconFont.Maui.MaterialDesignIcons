@@ -7,6 +7,6 @@ public partial class MainPage : ContentPage
 	public MainPage()
 	{
 		InitializeComponent();
-		BindingContext = new IconsViewModel("MaterialDesignWebIconsOutlined");
+		BindingContext = new IconsViewModel("MaterialDesignWebIcons");
 	}
 }

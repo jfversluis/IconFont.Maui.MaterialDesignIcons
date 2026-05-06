@@ -1,16 +1,16 @@
 <Project>
   <PropertyGroup>
     <IconFontFile>materialdesignicons-webfont.ttf</IconFontFile>
-    <IconFontAlias>MaterialDesignWebIconsOutlined</IconFontAlias>
-    <IconFontClass>MaterialDesignWebIconsOutlined</IconFontClass>
+    <IconFontAlias>MaterialDesignWebIcons</IconFontAlias>
+    <IconFontClass>MaterialDesignWebIcons</IconFontClass>
     <IconFontNamespace>IconFont.Maui.MaterialDesignWebIcons</IconFontNamespace>
   </PropertyGroup>
 
   <!-- Multi-font support: define one or more IconFontDefinition items. -->
   <ItemGroup>
     <IconFontDefinition Include="Resources/Fonts/materialdesignicons-webfont.ttf">
-      <FontAlias>MaterialDesignWebIconsOutlined</FontAlias>
-      <FontClass>MaterialDesignWebIconsOutlined</FontClass>
+      <FontAlias>MaterialDesignWebIcons</FontAlias>
+      <FontClass>MaterialDesignWebIcons</FontClass>
       <FontNamespace>IconFont.Maui.MaterialDesignWebIcons</FontNamespace>
     </IconFontDefinition>
   </ItemGroup>
